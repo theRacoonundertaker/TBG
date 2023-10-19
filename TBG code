@@ -1,0 +1,107 @@
+#include<iostream>
+using namespace std;
+
+//function delcarations
+void MonsterGen();
+int main() {
+
+	int room = 1;
+	char direction;
+	while (1) {
+		switch (room) {
+		case 1:
+			cout << "you're in room 1. You can go (e)ast" << endl;
+			cin >> direction;
+			if (direction == 'e')
+				room = 2;
+			break;
+		case 2:
+			//MonsterGen();
+			cout << "you're in room 2. You can go (s)outh or (w)est." << endl;
+			cin >> direction;
+			if (direction == 's') 
+				room = 3;
+			if (direction == 'w')
+				room = 1;
+			break;
+		case 3:
+			cout << "you're in room 3. you can go (n)orth or (s)outh." << endl;
+			cin >> direction;
+			if (direction == 'n')
+				room = 2;
+			if (direction == 's')
+				room = 4;
+			break;
+		case 4:
+			cout << "you're in room 4. You can go (n)orth or (e)ast." << endl;
+			cin >> direction;
+			if (direction == 'n')
+				room = 3;
+			if (direction == 'e')
+				room = 5;
+			break;
+		case 5:
+			cout << "you're in room 5. You can go (w)est" << endl;
+			cin >> direction;
+			if (direction == 'w')
+				room = 4;
+			if (direction == 's')
+				room = 6;
+			break;
+
+		case 6:
+			cout << "you're in room 6. You can go (n)orth or (e)ast" << endl;
+			cin >> direction;
+			if (direction == 'n')
+				room = 5;
+			if (direction == 'e')
+				room = 7;
+			break;
+
+
+
+		case 7:
+			cout << "you're in room 7. You can go (w)est or (s)outh" << endl;
+			cin >> direction;
+			if (direction == 'w')
+				room = 6;
+			if (direction == 's')
+				room = 8;
+			break;
+
+
+		case 8:
+			cout << "you're in room 8. You can go (n)orth or (e)ast" << endl;
+			cin >> direction;
+			if (direction == 'n')
+				room = 7;
+			if (direction == 'e')
+				room = 9;
+			break;
+
+		case 9:
+			cout << "you're in room 9. You can go (w)est or (s)outh" << endl;
+			cin >> direction;
+			if (direction == 'w')
+				room = 8;
+			if (direction == 's')
+				room = 10;
+			break;
+
+		case 10:
+			cout << "you're in room 10. You can go (n)orth" << endl;
+			cin >> direction;
+			if (direction == 'n')
+				room = 9;
+			break;
+
+		}//end switch
+	}//end game loop
+}//end main
+
+//function delcarations
+
+void MonsterGen() {
+//paste the code from tuesday here!
+cout << "GRR IM A MONSTER" << endl;
+}
